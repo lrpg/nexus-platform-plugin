@@ -37,6 +37,8 @@ class RemoteScannerFactory
   }
 
   static DirectoryScanner getDirectoryScanner() {
-    new DirectoryScanner()
+    DirectoryScanner directoryScanner = new DirectoryScanner()
+    directoryScanner.setFollowSymlinks(false)
+    return directoryScanner;
   }
 }
